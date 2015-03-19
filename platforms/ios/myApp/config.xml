@@ -19,6 +19,24 @@
     <feature name="LocalStorage">
         <param name="ios-package" value="CDVLocalStorage" />
     </feature>
+    <name>myApp</name>
+    <description>
+        An Ionic Framework and Cordova project.
+    </description>
+    <author email="hi@ionicframework" href="http://ionicframework.com/">
+      Ionic Framework Team
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <preference name="webviewbounce" value="false" />
+    <preference name="UIWebViewBounce" value="false" />
+    <preference name="DisallowOverscroll" value="true" />
+    <preference name="BackupWebStorage" value="none" />
+    <plugins>
+        <feature name="TalkingData">
+            <param name="ios-package" value="TalkingDataPlugin" />
+        </feature>
+    </plugins>
     <feature name="JPushPlugin">
         <param name="ios-package" value="JPushPlugin" />
     </feature>
@@ -34,17 +52,4 @@
     <feature name="Geolocation">
         <param name="ios-package" value="CDVLocation" />
     </feature>
-    <name>myApp</name>
-    <description>
-        An Ionic Framework and Cordova project.
-    </description>
-    <author email="hi@ionicframework" href="http://ionicframework.com/">
-      Ionic Framework Team
-    </author>
-    <content src="index.html" />
-    <access origin="*" />
-    <preference name="webviewbounce" value="false" />
-    <preference name="UIWebViewBounce" value="false" />
-    <preference name="DisallowOverscroll" value="true" />
-    <preference name="BackupWebStorage" value="none" />
 </widget>

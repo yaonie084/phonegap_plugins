@@ -18,5 +18,11 @@
   </feature>
   <feature name="Geolocation">
     <param name="ios-package" value="CDVLocation" />
-</feature>
+  </feature>
+  <feature name="TalkingData">
+    <param name="ios-package" value="TalkingDataPlugin">
+  </feature>
+  <feature name="JPushPlugin">
+    <param name="ios-package" value="JPushPlugin" />
+  </feature>
 </widget>

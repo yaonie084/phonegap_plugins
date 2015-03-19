@@ -27,9 +27,11 @@
 
 #import "AppDelegate.h"
 #import "MainViewController.h"
+#import "APService.h"
+#import "JPushPlugin.h"
+#import "TalkingData.h"
 
 #import <Cordova/CDVPlugin.h>
-#import "APService.h"
 
 @implementation AppDelegate
 
@@ -88,12 +90,13 @@
 
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
-    
 #if __has_feature(objc_arc)
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 #else
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
 #endif
+    
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     // Required
@@ -120,6 +123,7 @@
 #endif
     // Required
     [APService setupWithOption:launchOptions];
+    [TalkingData sessionStarted:@"BA9D8D19C81676D417040DE624435A54" withChannelId:@"本地测试"];
 
     return YES;
 }
@@ -164,6 +168,9 @@
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
     // Required
     [APService handleRemoteNotification:userInfo];
+    [[NSNotificationCenter defaultCenter] postNotificationName:kJPFNetworkDidReceiveMessageNotification
+                                                        object:userInfo];
+    
 }
 
 

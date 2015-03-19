@@ -67,6 +67,7 @@ module.exports = [
 module.exports.metadata = 
 // TOP OF METADATA
 {
+    "TalkingData": "1.2.6",
     "cn.jpush.phonegap.JPushPlugin": "2.0.0",
     "com.ionic.keyboard": "1.0.4",
     "org.apache.cordova.console": "0.2.13",
